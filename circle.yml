@@ -10,6 +10,6 @@ dependencies:
 
 test:
   override:
-    - docker-compose up
+    - docker-compose run -d; sleep 20
     - docker-compose run web python manage.py syncdb
     - tox
